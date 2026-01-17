@@ -37,6 +37,8 @@ const HomePage = () => {
         try {
             const queryParams = new URLSearchParams({ size });
 
+	    console.log(`${BACKEND_BASE_URL}api/contest/sample-contest?${queryParams.toString()}`)
+
             const response = await fetch(`${BACKEND_BASE_URL}api/contest/sample-contest?${queryParams.toString()}`, {
                 method: 'GET',
                 headers: {
